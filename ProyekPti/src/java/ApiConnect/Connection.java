@@ -13,7 +13,7 @@ import twitter4j.conf.*;
  * @author Sekar
  */
 public class Connection {
-    public Connection() {
+    public Twitter GetConnection() {
         String consumerKey = "ejlJRoqj4tozPbP5esGw4ifeq";
         String consumerSecret = "bHfcZZUA5O51o8curikFdCOi8hqUvrRx6xNl7LJzYyb4olIImm";
         String accessToken = "421779736-wEIwNOrATEokxRpnOTKExwAXhxCTJWNYTyyKRoVF";
@@ -27,6 +27,6 @@ public class Connection {
                 .setOAuthAccessToken(accessToken)
                 .setOAuthAccessTokenSecret(accessTokenSecret);
 
-        Twitter myTwitter = new TwitterFactory(cb.build()).getInstance();
+        return new TwitterFactory(cb.build()).getInstance();
     }
 }
