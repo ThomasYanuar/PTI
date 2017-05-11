@@ -1,0 +1,19 @@
+div#div1{
+  text-align:center;
+  padding:50px;
+  height:300px;
+  margin-top:-60px;
+}
+
+nav.navbar.navbar-default{
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover{
+  color:#555;
+  background-color:#e7e7e7;
+}
+
+div.container-fluid{
+  background-color:rgba(154,52,45,0.69);
+}
+

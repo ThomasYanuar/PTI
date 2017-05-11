@@ -1,0 +1,5 @@
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{
+  color:#fffbfb;
+  background-color:transparent;
+}
+
