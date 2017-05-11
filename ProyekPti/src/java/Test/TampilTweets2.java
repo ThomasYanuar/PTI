@@ -5,26 +5,26 @@
  */
 package Test;
 
-import ApiConnect.*;
-import java.util.List;
+import ApiConnect.Connection;
 import twitter4j.Status;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
+import twitter4j.ResponseList;
 
 /**
  *
- * @author Sekar
+ * @author Kirizu
  */
-public class TampilTweets {
+public class TampilTweets2 {
 
     public static void main(String[] args) throws TwitterException {
+
         // The factory instance is re-useable and thread safe.
         Twitter twitter = new Connection().GetConnection();
-//        Twitter twitter = connection.getSingleton
-        List<Status> statuses = twitter.getHomeTimeline();
+        ResponseList<Status> statuses = twitter.getMentionsTimeline();
         System.out.println("Showing home timeline.");
         for (Status status : statuses) {
-            System.out.println(status.getUser().getName() + ":"
+            System.out.println(status.getUser().getScreenName() + "\n"
                     + status.getText());
         }
     }
