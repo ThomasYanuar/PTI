@@ -16,7 +16,13 @@ import twitter4j.ResponseList;
  * @author Kirizu
  */
 public class TampilTweets2 {
-
+    /*
+    !!!!!!!!!!!!!!!!!!!!!!!!!!
+    CATATAN :
+    Tolong lakukan mention ke @Thomas_Yanuar dengan isi terserah sebelum
+    anda menjalankan file ini!
+    !!!!!!!!!!!!!!!!!!!!!!!!!!
+    */
     public static void main(String[] args) throws TwitterException {
 
         // The factory instance is re-useable and thread safe.
