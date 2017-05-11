@@ -22,6 +22,9 @@ public class TampilTweets2 {
     Tolong lakukan mention ke @Thomas_Yanuar dengan isi terserah sebelum
     anda menjalankan file ini!
     !!!!!!!!!!!!!!!!!!!!!!!!!!
+    
+    ini untuk show mention ke @thomas aja ya?
+    
     */
     public static void main(String[] args) throws TwitterException {
 
