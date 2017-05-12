@@ -24,6 +24,8 @@ public class TampilTweets2 {
     !!!!!!!!!!!!!!!!!!!!!!!!!!
     
     ini untuk show mention ke @thomas aja ya?
+
+    answer >> benar sekali
     
     */
     public static void main(String[] args) throws TwitterException {
