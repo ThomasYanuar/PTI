@@ -1,9 +1,3 @@
-<%-- 
-    Document   : home
-    Created on : May 10, 2017, 2:38:23 PM
-    Author     : Sekar
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
