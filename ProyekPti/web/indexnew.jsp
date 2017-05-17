@@ -69,12 +69,11 @@
         ResponseList<Status> statuses = twitter.getMentionsTimeline();
         
                 for(Status status : statuses) {
-                out.print(status.getUser().getScreenName()+" : "+ status.getText());
-            }
-            out.println("<h1>Servlet Twitterfeed at " + request.getContextPath() + "</h1>");
+                out.print(status.getUser().getScreenName()+" : "+ status.getText()+"<br>");
+            } 
+            
             
             %>
-            <p>gan request lagu ini...</p>
             <p></p>
         </div>
     </div>
