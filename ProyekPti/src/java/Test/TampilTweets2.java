@@ -36,7 +36,7 @@ public class TampilTweets2 {
         System.out.println("Showing home timeline.");
         for (Status status : statuses) {
             System.out.println(status.getUser().getScreenName() + " : "
-                    + status.getText());
+                    + status.getCreatedAt());
         }
     }
 }
