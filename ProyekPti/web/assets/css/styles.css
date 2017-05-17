@@ -25,9 +25,10 @@ div.container-fluid{
 div#div2.wew2{
   margin-top:17px;
   float:right;
-  height:300px;
+  height:500px;
   border:dotted;
   width:50%;
+  background-color: white;
 }
 
 div#div3.wew3{
@@ -43,6 +44,7 @@ footer#footer.footer1{
   background-color:rgb(183,112,108);
   margin-top:323px;
   height:100px;
+  margin-top: 600px;
   width:100%;
 }
 
