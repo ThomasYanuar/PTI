@@ -1,3 +1,10 @@
+<%-- 
+    Document   : indexnew
+    Created on : May 17, 2017, 7:33:56 PM
+    Author     : Yoseph
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 
