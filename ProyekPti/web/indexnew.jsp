@@ -4,6 +4,10 @@
     Author     : Yoseph
 --%>
 
+<%@page import="ApiConnect.Connection"%>
+<%@page import="twitter4j.ResponseList"%>
+<%@page import="twitter4j.Twitter"%>
+<%@page import="twitter4j.Status"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -61,7 +65,14 @@
     <div id="div2" class="wew2">
         <div class="jumbotron">
             <h1>Twitter feed</h1>
-            <% 
+            <% Twitter twitter = new Connection().GetConnection();
+        ResponseList<Status> statuses = twitter.getMentionsTimeline();
+        
+                for(Status status : statuses) {
+                out.print(status.getUser().getScreenName()+" : "+ status.getText());
+            }
+            out.println("<h1>Servlet Twitterfeed at " + request.getContextPath() + "</h1>");
+            
             %>
             <p>gan request lagu ini...</p>
             <p></p>
