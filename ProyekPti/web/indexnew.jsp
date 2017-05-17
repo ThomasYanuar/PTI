@@ -15,7 +15,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PTI proyek</title>
+        <title>Masdha FM - Home</title>
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="stylesheet" href="assets/css/untitled.css">
@@ -36,13 +36,14 @@
     <body>
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
-                <div class="navbar-header"><a class="navbar-brand navbar-link" href="#"><strong>Masdha</strong> FM</a>
+                <div class="navbar-header"><a class="navbar-brand navbar-link" href="indesnew.jsp"><strong>Masdha</strong> FM</a>
                     <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"></button>
                 </div>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li role="presentation"><a href="#">kontak kami</a></li>
-                        <li role="presentation"><a href="#">login </a></li>
+                        <li role="presentation"><a href="Programs.jsp">Programs</a></li>
+                        <li role="presentation"><a href="Kontak.jsp">Kontak Kami</a></li>
+                        <li role="presentation"><a href="About.jsp">About Us</a></li>
                     </ul>
                 </div>
             </div>
