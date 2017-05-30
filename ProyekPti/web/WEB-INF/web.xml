@@ -4,9 +4,17 @@
         <servlet-name>Twitterfeed</servlet-name>
         <servlet-class>Controller.Twitterfeed</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Listener</servlet-name>
+        <servlet-class>Test.Listener</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Twitterfeed</servlet-name>
         <url-pattern>/Twitterfeed</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Listener</servlet-name>
+        <url-pattern>/Listener</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
@@ -16,4 +24,11 @@
     <welcome-file-list>
         <welcome-file>home.jsp</welcome-file>
     </welcome-file-list>
+    
+        <listener>
+        <listener-class>
+            Test.SessionCounter
+        </listener-class>
+        </listener>
+    
 </web-app>
