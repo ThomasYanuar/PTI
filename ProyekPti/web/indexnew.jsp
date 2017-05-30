@@ -78,12 +78,15 @@
         </div>
         <div id="div3" class="wew3">
             <div class="jumbotron">
-                <audio controls>
+<!--                <audio controls>
                     <iframe src="http://jogjastreamers.com/masdha-fm.html" 
                             title="MasdhaFM" style="background-image:url(Images/Masdha.png)" sandbox="allow-same-origin allow-scripts"
                             height="70" width="70" scrolling="no">
-                    </iframe>
-
+                    </iframe>-->
+<iframe src="http://jkt.jogjastreamers.com:8000/masda?s=660216089945691" 
+                    title="MasdhaFM" style="background-image:url(Images/Masdha.png)"
+                    height="180" width="300">
+                </iframe>
                 </audio>
                 <%
                     SessionCounter counter = (SessionCounter) session.getAttribute("counter");
