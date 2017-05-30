@@ -4,6 +4,7 @@
     Author     : Yoseph
 --%>
 
+<%@page import="Test.SessionCounter"%>
 <%@page import="ApiConnect.Connection"%>
 <%@page import="twitter4j.ResponseList"%>
 <%@page import="twitter4j.Twitter"%>
@@ -78,17 +79,22 @@
         <div id="div3" class="wew3">
             <div class="jumbotron">
                 <audio controls>
-                <iframe src="http://jogjastreamers.com/masdha-fm.html" 
-                        title="MasdhaFM" style="background-image:url(Images/Masdha.png)" sandbox="allow-same-origin allow-scripts"
-                        height="70" width="70" scrolling="no">
-                </iframe>
+                    <iframe src="http://jogjastreamers.com/masdha-fm.html" 
+                            title="MasdhaFM" style="background-image:url(Images/Masdha.png)" sandbox="allow-same-origin allow-scripts"
+                            height="70" width="70" scrolling="no">
+                    </iframe>
+
                 </audio>
+                <%
+                    SessionCounter counter = (SessionCounter) session.getAttribute("counter");
+                %>
+                Number of online user(s): <%= counter.getActiveSessionNumber()%>
 
                 <div id="musicqueue" style="overflow:scroll;">
-                <h1>Music queue</h1>
-                <p>Mimi peri - unknown</p>
+                    <h1>Music queue</h1>
+                    <p>Mimi peri - unknown</p>
                 </div>
-                
+
             </div>
         </div>
         <footer id="footer" class="footer1"></footer>
