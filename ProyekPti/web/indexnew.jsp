@@ -1,16 +1,9 @@
-<%-- 
-    Document   : indexnew
-    Created on : May 17, 2017, 7:33:56 PM
-    Author     : Yoseph
---%>
-
 <%@page import="Test.SessionCounter"%>
 <%@page import="ApiConnect.Connection"%>
 <%@page import="twitter4j.ResponseList"%>
 <%@page import="twitter4j.Twitter"%>
 <%@page import="twitter4j.Status"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <html>
 
     <head>
@@ -83,11 +76,12 @@
                             title="MasdhaFM" style="background-image:url(Images/Masdha.png)" sandbox="allow-same-origin allow-scripts"
                             height="70" width="70" scrolling="no">
                     </iframe>-->
+            </audio>
 <iframe src="http://jkt.jogjastreamers.com:8000/masda?s=660216089945691" 
                     title="MasdhaFM" style="background-image:url(Images/Masdha.png)"
                     height="180" width="300">
                 </iframe>
-                </audio>
+                <br>
                 <%
                     SessionCounter counter = (SessionCounter) session.getAttribute("counter");
                 %>
@@ -103,6 +97,8 @@
         <footer id="footer" class="footer1"></footer>
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    </body>
+
+        
+    </body> 
 
 </html>
