@@ -35,8 +35,10 @@ public class TampilTweets2 {
         ResponseList<Status> statuses = twitter.getMentionsTimeline();
         System.out.println("Showing home timeline.");
         for (Status status : statuses) {
-            System.out.println(status.getUser().getScreenName() + " : "
-                    + status.getCreatedAt() + " : " + status.getText() );
+            System.out.println(
+//                    status.getUser().getScreenName() + " : "
+//                    + status.getCreatedAt() + " : " 
+                     status.getText() );
         }
     }
 }
