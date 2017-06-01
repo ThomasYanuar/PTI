@@ -32,6 +32,7 @@
         <link rel="stylesheet" href="assets/css/untitled-10.css">
         <link rel="stylesheet" href="assets/css/untitled-11.css">
         <link rel="stylesheet" href="assets/css/untitled-12.css">
+
     </head>
 
     <body>
@@ -66,38 +67,46 @@
         </div>
         <div id="div2" class="wew2" style="overflow:scroll;">
             <div class="jumbotron">
+                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script>
+ function autoRefresh_div()
+ {
+      $("#result").load("#result");// a function which will load data from other file after x seconds
+  }
+ 
+  setInterval('autoRefresh_div()', 20000); // refresh div after 60 secs
+            </script>
+                <div id="result">
                 <h1>Twitter feed</h1>
-                <% Twitter twitter = new Connection().GetConnection();
-                    ResponseList<Status> statuses = twitter.getMentionsTimeline();
-
-                    for (Status status : statuses) {
-                        out.print(status.getUser().getScreenName() + " : " + status.getText() + "<br>");
-                    }%>
-                <p></p>
+                <%! static int y = 1;
+                    
+                
+                %>
+                <% out.print("yuhu"+y++);
+                %>
+                    <p></p></div>
             </div>
         </div>
         <div id="div3" class="wew3">
             <div class="jumbotron">
-<!--                <audio controls>
-                    <iframe src="http://jogjastreamers.com/masdha-fm.html" 
-                            title="MasdhaFM" style="background-image:url(Images/Masdha.png)" sandbox="allow-same-origin allow-scripts"
-                            height="70" width="70" scrolling="no">
-                    </iframe>-->
-<iframe src="http://jkt.jogjastreamers.com:8000/masda?s=660216089945691" 
-                    title="MasdhaFM" style="background-image:url(Images/Masdha.png)"
-                    height="180" width="300">
+                <!-- <audio controls>
+                     <iframe src="http://jogjastreamers.com/masdha-fm.html" 
+                     title="MasdhaFM" style="background-image:url(Images/Masdha.png)" sandbox="allow-same-origin allow-scripts"
+                     height="70" width="70" scrolling="no">
+                </iframe>-->
+                <iframe src="http://jkt.jogjastreamers.com:8000/masda?s=660216089945691" 
+                        title="MasdhaFM" style="background-image:url(Images/Masdha.png)"
+                        height="180" width="300">
                 </iframe>
                 </audio>
                 <%
-                    SessionCounter counter = (SessionCounter) session.getAttribute("counter");
+                 SessionCounter counter = (SessionCounter) session.getAttribute("counter");
                 %>
                 Number of online user(s): <%= counter.getActiveSessionNumber()%>
-
                 <div id="musicqueue" style="overflow:scroll;">
                     <h1>Music queue</h1>
                     <p>Mimi peri - unknown</p>
                 </div>
-
             </div>
         </div>
         <footer id="footer" class="footer1"></footer>
