@@ -1,12 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Test;
+package Feed;
 
-import Feed.SongRequest;
-import java.util.Date;
+import ApiConnect.Connection;
 import twitter4j.DirectMessage;
 import twitter4j.StallWarning;
 import twitter4j.Status;
@@ -18,13 +12,9 @@ import twitter4j.UserList;
 import twitter4j.UserStreamListener;
 import twitter4j.conf.ConfigurationBuilder;
 
-/**
- *
- * @author Yoseph
- */
-public class TwitterStreamAPI {
+public class twitterfeedsrvlt {
 
-    public static void main(String[] args) {
+    public void Twitterstream() {
         ConfigurationBuilder cb = new ConfigurationBuilder();
         cb.setDebugEnabled(true);
         cb.setOAuthConsumerKey("ejlJRoqj4tozPbP5esGw4ifeq");
@@ -37,11 +27,8 @@ public class TwitterStreamAPI {
         UserStreamListener listener = new UserStreamListener() {
             @Override
             public void onStatus(Status status) {
-                SongRequest songRequest = new SongRequest();
-                songRequest.MakeRequest(status.getUser().getScreenName(), status.getText());
-                Date dateCreate = status.getCreatedAt();
-//                songRequest.getList();
-//                System.out.println("onStatus @" + status.getUser().getScreenName() + " - " + status.getText());
+                System.out.println("onStatus @" + status.getUser().getScreenName() + " - " + status.getText());
+                
             }
 
             @Override
@@ -217,7 +204,6 @@ public class TwitterStreamAPI {
         };
 
         String useIds[] = {"99901654"};
-
         twitterStream.addListener(listener);
         twitterStream.user(useIds);
     }

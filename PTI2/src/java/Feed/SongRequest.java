@@ -5,6 +5,7 @@
  */
 package Feed;
 
+import java.io.PrintWriter;
 import java.util.LinkedList;
 
 /**
@@ -57,7 +58,7 @@ public class SongRequest {
 //        songList.add(new SongRequest(user, artis, title));
 //    }
 
-    public void PrintRequest(String user, String artis, String title) {
+    public String PrintRequest(String user, String artis, String title) {
 //        int n = 0;
 //        for (SongRequest songRequest : songList) {
 //            String user = songRequest.getUser();
@@ -66,10 +67,10 @@ public class SongRequest {
 //            songList.removeFirst();
 //            System.out.println(user + " : " + artis + " - " + title);
 //        }
-        System.out.println(user + " : " + artis + " - " + title);
+        return (user + " : " + artis + " - " + title);
     }
 
-    public void MakeRequest(String user, String text) {
+    public String MakeRequest(String user, String text) {
         if (text.toLowerCase().contains("!request")) {
             SongRequest songRequest = new SongRequest();
             String temp = text.replaceAll("@Thomas_Yanuar ", "");
@@ -82,8 +83,9 @@ public class SongRequest {
             }
             String temp3 = temp2[i].replaceAll("request ", "");
             String[] textSplit = temp3.split("[-]");
-            songRequest.PrintRequest(user, textSplit[0], textSplit[1]);
+            return songRequest.PrintRequest(user, textSplit[0], textSplit[1]);
         }
+        return "";
     }
 
     public static void main(String[] args) {

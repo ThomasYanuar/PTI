@@ -1,14 +1,20 @@
-<%-- 
-    Document   : indexnew
-    Created on : May 17, 2017, 7:33:56 PM
-    Author     : Yoseph
---%>
-
+<%@page import="java.io.IOException"%>
+<%@page import="twitter4j.UserList"%>
+<%@page import="twitter4j.DirectMessage"%>
+<%@page import="twitter4j.User"%>
+<%@page import="twitter4j.StallWarning"%>
+<%@page import="twitter4j.StatusDeletionNotice"%>
+<%@page import="Feed.SongRequest"%>
+<%@page import="twitter4j.UserStreamListener"%>
+<%@page import="twitter4j.TwitterStreamFactory"%>
+<%@page import="twitter4j.TwitterStream"%>
+<%@page import="twitter4j.conf.ConfigurationBuilder"%>
 <%@page import="Test.SessionCounter"%>
 <%@page import="ApiConnect.Connection"%>
 <%@page import="twitter4j.ResponseList"%>
 <%@page import="twitter4j.Twitter"%>
 <%@page import="twitter4j.Status"%>
+<%@page import="Feed.twitterfeedsrvlt"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -32,6 +38,7 @@
         <link rel="stylesheet" href="assets/css/untitled-10.css">
         <link rel="stylesheet" href="assets/css/untitled-11.css">
         <link rel="stylesheet" href="assets/css/untitled-12.css">
+
 
     </head>
 
@@ -68,41 +75,49 @@
         <div id="div2" class="wew2" style="overflow:scroll;">
             <div class="jumbotron">
                 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-   <script>
- function autoRefresh_div()
- {
-      $("#result").load("#result");// a function which will load data from other file after x seconds
-  }
- 
-  setInterval('autoRefresh_div()', 20000); // refresh div after 60 secs
-            </script>
-                <div id="result">
+
                 <h1>Twitter feed</h1>
-                <%! static int y = 1;
-                    
-                
-                %>
-                <% out.print("yuhu"+y++);
-                %>
-                    <p></p></div>
+
+                <% %>
+                <% twitterfeedsrvlt test = new twitterfeedsrvlt();%>
+                feed nya gan :<br> 
+
+
+                <p></p>
             </div>
         </div>
         <div id="div3" class="wew3">
             <div class="jumbotron">
-                <!-- <audio controls>
-                     <iframe src="http://jogjastreamers.com/masdha-fm.html" 
-                     title="MasdhaFM" style="background-image:url(Images/Masdha.png)" sandbox="allow-same-origin allow-scripts"
-                     height="70" width="70" scrolling="no">
+                <!--                 <audio controls>
+                                     <iframe src="http://jogjastreamers.com/masdha-fm.html" 
+                                     title="MasdhaFM" style="background-image:url(Images/Masdha.png)" sandbox="allow-same-origin allow-scripts"
+                                     height="70" width="70" scrolling="no">
                 </iframe>-->
                 <iframe src="http://jkt.jogjastreamers.com:8000/masda?s=660216089945691" 
                         title="MasdhaFM" style="background-image:url(Images/Masdha.png)"
                         height="180" width="300">
                 </iframe>
-                </audio>
-                <%
-                 SessionCounter counter = (SessionCounter) session.getAttribute("counter");
-                %>
-                Number of online user(s): <%= counter.getActiveSessionNumber()%>
+                <br>
+           <script type="text/javascript">
+                $(document).ready(function () {
+    var interval = setInterval(refresh, 10000);
+});
+
+function refresh() {
+    $.get('count.jsp', function (result) {
+        $('#count').html(result);
+    });    
+}
+                </script>
+                <div id="count">
+                    
+                    <iframe src="count.jsp" sandbox="allow-scripts allow-same-origin allow-forms">
+               
+                </iframe>
+                </div>
+
+               
+              
                 <div id="musicqueue" style="overflow:scroll;">
                     <h1>Music queue</h1>
                     <p>Mimi peri - unknown</p>
