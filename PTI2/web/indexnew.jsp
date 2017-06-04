@@ -14,7 +14,6 @@
 <%@page import="twitter4j.ResponseList"%>
 <%@page import="twitter4j.Twitter"%>
 <%@page import="twitter4j.Status"%>
-<%@page import="Feed.twitterfeedsrvlt"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -77,11 +76,10 @@
                 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
                 <h1>Twitter feed</h1>
-
-                <% %>
-                <% twitterfeedsrvlt test = new twitterfeedsrvlt();%>
-                feed nya gan :<br> 
-
+                
+                <iframe src="streamfeedtwitter.jsp"></iframe>
+                
+                    
 
                 <p></p>
             </div>

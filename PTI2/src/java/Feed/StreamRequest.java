@@ -23,6 +23,10 @@ import twitter4j.UserStreamListener;
 public class StreamRequest {
 
     public StreamRequest() {
+    }
+
+    
+    public void StreamRequest() {
 
         TwitterStream twitterStream = new ApiConnect.Connection().GetStream();
 
@@ -31,9 +35,9 @@ public class StreamRequest {
             public void onStatus(Status status) {
                 SongRequest songRequest = new SongRequest();
                 songRequest.MakeRequest(status.getUser().getScreenName(), status.getText());
-                Date dateCreate = status.getCreatedAt();
+                
 //                songRequest.getList();
-//                System.out.println("onStatus @" + status.getUser().getScreenName() + " - " + status.getText());
+                System.out.println("\n" + status.getUser().getScreenName() + "\n" + status.getText());
             }
 
             @Override

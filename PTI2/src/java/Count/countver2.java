@@ -65,9 +65,10 @@ public class countver2 implements HttpSessionListener {
     // servlets and JSP pages can access the session counts.
     private void storeInServletContext(HttpSessionEvent event) {
         HttpSession session = event.getSession();
-//        session.setMaxInactiveInterval(60);
 //        JOptionPane.showMessageDialog(null, session.getMaxInactiveInterval());
+//        session.setMaxInactiveInterval(60);
         context = session.getServletContext();
+//        session.setMaxInactiveInterval(60);
         context.setAttribute("sessionCounter", this);
     }
 
