@@ -107,23 +107,29 @@ public class SongRequest {
     public void MakeRequest(String user, String text) {
         if (!tempText.equals(text)) {
             if (text.toLowerCase().contains("!request")) {
-//            JOptionPane.showMessageDialog(null, "masuk");
+//                JOptionPane.showMessageDialog(null, "masuk");
+                System.out.println("");
                 SongRequest songRequest = new SongRequest();
                 String temp = text.replaceAll("@Thomas_Yanuar ", "");
-//            JOptionPane.showMessageDialog(null, temp);
+//                JOptionPane.showMessageDialog(null, temp);
+                System.out.println("");
                 String[] temp2 = temp.split("[!]");
                 int i, j = 0;
                 for (i = 0; i < temp2.length; i++) {
                     if (temp2[i].contains("request")) {
                         j = i;
-//                    JOptionPane.showMessageDialog(null, "masuk split\n"+i+"\n"+temp2[i]);
+//                        JOptionPane.showMessageDialog(null, "masuk split\n" + i + "\n" + temp2[i]);
+                        System.out.println("");
                     }
                 }
                 String temp3 = temp2[j].replaceAll("request ", "");
-//            JOptionPane.showMessageDialog(null, "temp3\n"+temp3);
+//                JOptionPane.showMessageDialog(null, "temp3\n" + temp3);
+                System.out.println("");
                 String[] textSplit = temp3.split("[-]");
-//            JOptionPane.showMessageDialog(null, "textSplit[0]\n"+textSplit[0]);
-//            JOptionPane.showMessageDialog(null, "textSplit[1]\n"+textSplit[1]);
+//                JOptionPane.showMessageDialog(null, "textSplit[0]\n" + textSplit[0]);
+                System.out.println("");
+//                JOptionPane.showMessageDialog(null, "textSplit[1]\n" + textSplit[1]);
+                System.out.println("");
                 songRequest.addListQueue(user, textSplit[0], textSplit[1]);
                 temp = (user + textSplit[0] + textSplit[1]).toLowerCase();
                 boolean find = false;
@@ -139,13 +145,11 @@ public class SongRequest {
                 if (find == false) {
                     songRequest.addListChart(user, textSplit[0], textSplit[1], 1);
                 }
-//            if (find=true){
-//                songListChart.
-//            }
             }
-            tempText=text;
+            tempText = text;
         }
 //        JOptionPane.showMessageDialog(null, "tidak masuk");
+        System.out.println("");
     }
 
     public static void main(String[] args) {

@@ -37,6 +37,7 @@
         <link rel="stylesheet" href="assets/css/untitled-10.css">
         <link rel="stylesheet" href="assets/css/untitled-11.css">
         <link rel="stylesheet" href="assets/css/untitled-12.css">
+
     </head>
     <body>
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -68,52 +69,56 @@
                 </div>
             </div>
         </div>
-        <div id="div2" class="wew2" style="overflow:scroll;">
+        <iframe src="streamfeedtwitter.jsp" width="0" height="0"></iframe>
+        <div id="div2" class="wew2">
             <div class="jumbotron">
                 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
                 <h1>Twitter feed</h1>
-<script type="text/javascript">
+                
+                <script type="text/javascript">
                     $(document).ready(function () {
-                        var interval = setInterval(refresh, 1000);
+                        var interval = setInterval(refresh, 5000);
                     });
-
                     function refresh() {
                         $.get('showqueue.jsp', function (result) {
-                            $('#feed').html(result);
+                            $('#feeed').html(result);
                         });
                     }
                 </script>
-                <div id="feed">                
-                    <iframe src="showqueue.jsp"></iframe>                   
+                <script>            
+			document.getElementById("yuhu").height= "500px";
+document.getElementById("yuhu").width= "300px";
+        </script>
+                <div id="feeed">                
+                    <iframe id="yuhu" src="showqueue.jsp" style="height:500px;width:300px;"></iframe>                   
                 </div>
-                <iframe src="streamfeedtwitter.jsp" width="0" height="0"></iframe>
                 <p></p>
             </div>
         </div>
         <div id="div3" class="wew3">
             <div class="jumbotron">
-                <!--                 <audio controls>
+                                 <audio controls>
                                      <iframe src="http://jogjastreamers.com/masdha-fm.html" 
                                      title="MasdhaFM" style="background-image:url(Images/Masdha.png)" sandbox="allow-same-origin allow-scripts"
                                      height="70" width="70" scrolling="no">
-                </iframe>-->
-                <iframe src="http://jkt.jogjastreamers.com:8000/masda?s=660216089945691" 
+                </iframe>
+<!--                <iframe src="http://jkt.jogjastreamers.com:8000/masda?s=660216089945691" 
                         title="MasdhaFM" style="background-image:url(Images/Masdha.png)"
                         height="180" width="300">
-                </iframe>
+                </iframe>-->
                 <br>
                 <script type="text/javascript">
                     $(document).ready(function () {
-                        var interval = setInterval(refresh, 10000);
+                        var interval = setInterval(refresh1, 5000);
                     });
-
-                    function refresh() {
+                    function refresh1() {
                         $.get('count.jsp', function (result) {
                             $('#count').html(result);
                         });
                     }
                 </script>
                 <div id="count">
+                    
                     <iframe src="count.jsp" sandbox="allow-scripts allow-same-origin allow-forms">
 
                     </iframe>
