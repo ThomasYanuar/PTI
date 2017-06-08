@@ -37,10 +37,7 @@
         <link rel="stylesheet" href="assets/css/untitled-10.css">
         <link rel="stylesheet" href="assets/css/untitled-11.css">
         <link rel="stylesheet" href="assets/css/untitled-12.css">
-
-
     </head>
-
     <body>
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
@@ -74,13 +71,22 @@
         <div id="div2" class="wew2" style="overflow:scroll;">
             <div class="jumbotron">
                 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
                 <h1>Twitter feed</h1>
-                
-                <iframe src="streamfeedtwitter.jsp"></iframe>
-                
-                    
+<script type="text/javascript">
+                    $(document).ready(function () {
+                        var interval = setInterval(refresh, 1000);
+                    });
 
+                    function refresh() {
+                        $.get('showqueue.jsp', function (result) {
+                            $('#feed').html(result);
+                        });
+                    }
+                </script>
+                <div id="feed">                
+                    <iframe src="showqueue.jsp"></iframe>                   
+                </div>
+                <iframe src="streamfeedtwitter.jsp" width="0" height="0"></iframe>
                 <p></p>
             </div>
         </div>
@@ -96,26 +102,22 @@
                         height="180" width="300">
                 </iframe>
                 <br>
-           <script type="text/javascript">
-                $(document).ready(function () {
-    var interval = setInterval(refresh, 10000);
-});
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        var interval = setInterval(refresh, 10000);
+                    });
 
-function refresh() {
-    $.get('count.jsp', function (result) {
-        $('#count').html(result);
-    });    
-}
+                    function refresh() {
+                        $.get('count.jsp', function (result) {
+                            $('#count').html(result);
+                        });
+                    }
                 </script>
                 <div id="count">
-                    
                     <iframe src="count.jsp" sandbox="allow-scripts allow-same-origin allow-forms">
-               
-                </iframe>
-                </div>
 
-               
-              
+                    </iframe>
+                </div>
                 <div id="musicqueue" style="overflow:scroll;">
                     <h1>Music queue</h1>
                     <p>Mimi peri - unknown</p>

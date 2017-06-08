@@ -17,12 +17,6 @@
     <body>
         <%StreamRequest sr = new StreamRequest();
             sr.StreamRequest();%>
-        <%
-            for (SongRequest songRequest : SongRequest.songListQueue) {
-                String user = songRequest.getUser();
-                String artis = songRequest.getArtis();
-                String title = songRequest.getTitle();
-                out.println(user + " : " + artis + " - " + title);
-            }%>
+
     </body>
 </html>

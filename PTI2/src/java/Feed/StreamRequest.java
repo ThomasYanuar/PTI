@@ -6,6 +6,7 @@
 package Feed;
 
 import java.util.Date;
+import javax.swing.JOptionPane;
 import twitter4j.DirectMessage;
 import twitter4j.StallWarning;
 import twitter4j.Status;
@@ -35,9 +36,9 @@ public class StreamRequest {
             public void onStatus(Status status) {
                 SongRequest songRequest = new SongRequest();
                 songRequest.MakeRequest(status.getUser().getScreenName(), status.getText());
-                
+                JOptionPane.showMessageDialog(null, "listen");
 //                songRequest.getList();
-                System.out.println("\n" + status.getUser().getScreenName() + "\n" + status.getText());
+//                System.out.println("\n" + status.getUser().getScreenName() + "\n" + status.getText());
             }
 
             @Override

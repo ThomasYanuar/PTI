@@ -15,6 +15,7 @@ import javax.swing.JOptionPane;
  */
 public class SongRequest {
 
+    static String tempText = "";
     private String user;
     private String artis;
     private String title;
@@ -104,44 +105,47 @@ public class SongRequest {
     }
 
     public void MakeRequest(String user, String text) {
-        if (text.toLowerCase().contains("!request")) {
-            JOptionPane.showMessageDialog(null, "masuk");
-            SongRequest songRequest = new SongRequest();
-            String temp = text.replaceAll("@Thomas_Yanuar ", "");
-            JOptionPane.showMessageDialog(null, temp);
-            String[] temp2 = temp.split("[!]");
-            int i, j=0;
-            for (i = 0; i < temp2.length; i++) {
-                if (temp2[i].contains("request")) {
-                    j = i;
-                    JOptionPane.showMessageDialog(null, "masuk split\n"+i+"\n"+temp2[i]);
+        if (!tempText.equals(text)) {
+            if (text.toLowerCase().contains("!request")) {
+//            JOptionPane.showMessageDialog(null, "masuk");
+                SongRequest songRequest = new SongRequest();
+                String temp = text.replaceAll("@Thomas_Yanuar ", "");
+//            JOptionPane.showMessageDialog(null, temp);
+                String[] temp2 = temp.split("[!]");
+                int i, j = 0;
+                for (i = 0; i < temp2.length; i++) {
+                    if (temp2[i].contains("request")) {
+                        j = i;
+//                    JOptionPane.showMessageDialog(null, "masuk split\n"+i+"\n"+temp2[i]);
+                    }
                 }
-            }
-            String temp3 = temp2[j].replaceAll("request ", "");
-            JOptionPane.showMessageDialog(null, "temp3\n"+temp3);
-            String[] textSplit = temp3.split("[-]");
-            JOptionPane.showMessageDialog(null, "textSplit[0]\n"+textSplit[0]);
-            JOptionPane.showMessageDialog(null, "textSplit[1]\n"+textSplit[1]);
-            songRequest.addListQueue(user, textSplit[0], textSplit[1]);
-            temp = (user + textSplit[0] + textSplit[1]).toLowerCase();
-            boolean find = false;
-            int tempVote = 0;
-            for (SongRequest sr : songListChart) {
-                if ((sr.getUser() + sr.getArtis() + sr.getTitle()).toLowerCase().equals(temp)) {
-                    find = true;
-                    tempVote = sr.getVote();
-                    tempVote++;
-                    sr.setVote(tempVote);
+                String temp3 = temp2[j].replaceAll("request ", "");
+//            JOptionPane.showMessageDialog(null, "temp3\n"+temp3);
+                String[] textSplit = temp3.split("[-]");
+//            JOptionPane.showMessageDialog(null, "textSplit[0]\n"+textSplit[0]);
+//            JOptionPane.showMessageDialog(null, "textSplit[1]\n"+textSplit[1]);
+                songRequest.addListQueue(user, textSplit[0], textSplit[1]);
+                temp = (user + textSplit[0] + textSplit[1]).toLowerCase();
+                boolean find = false;
+                int tempVote = 0;
+                for (SongRequest sr : songListChart) {
+                    if ((sr.getUser() + sr.getArtis() + sr.getTitle()).toLowerCase().equals(temp)) {
+                        find = true;
+                        tempVote = sr.getVote();
+                        tempVote++;
+                        sr.setVote(tempVote);
+                    }
                 }
-            }
-            if (find == false) {
-                songRequest.addListChart(user, textSplit[0], textSplit[1], 1);
-            }
+                if (find == false) {
+                    songRequest.addListChart(user, textSplit[0], textSplit[1], 1);
+                }
 //            if (find=true){
 //                songListChart.
 //            }
+            }
+            tempText=text;
         }
-        JOptionPane.showMessageDialog(null, "tidak masuk");
+//        JOptionPane.showMessageDialog(null, "tidak masuk");
     }
 
     public static void main(String[] args) {
