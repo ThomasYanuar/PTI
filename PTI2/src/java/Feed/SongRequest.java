@@ -5,7 +5,9 @@
  */
 package Feed;
 
-import java.io.PrintWriter;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.LinkedList;
 import javax.swing.JOptionPane;
 
@@ -14,7 +16,10 @@ import javax.swing.JOptionPane;
  * @author Kirizu
  */
 public class SongRequest {
-
+    
+    static String tempDate = "";
+//    String currentDate = "a";
+    static int countDate = -1;
     static String tempText = "";
     private String user;
     private String artis;
@@ -71,6 +76,14 @@ public class SongRequest {
     public void setVote(int vote) {
         this.vote = vote;
     }
+    
+//    public Date getDate() {
+//        return date;
+//    }
+//
+//    public void setVote(Date date) {
+//        this.date = date;
+//    }
 
     public void addListQueue(String user, String artis, String title) {
         SongRequest songRequest = new SongRequest();
@@ -151,37 +164,61 @@ public class SongRequest {
 //        JOptionPane.showMessageDialog(null, "tidak masuk");
         System.out.println("");
     }
+    
+    public void deleteChart() {
+        Date date = new Date();
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        
+        String currentDate = dateFormat.format(date);
+        if (countDate!=7) {
+            if (!tempDate.equals(currentDate)) {
+                countDate++;
+                tempDate=currentDate;
+                System.out.println("tempdate = "+tempDate);
+            }
+            System.out.println("countdate = " + countDate);
+        }
+        if (countDate==7) {
+            countDate=0;
+            System.out.println("remove = "+countDate);
+            songListChart.removeAll(songListChart);
+        }
+    }
 
     public static void main(String[] args) {
-        SongRequest songRequest = new SongRequest();
-//        int a=1;
-//        for (int i = 0; i < 10; i++) {
-//            songRequest.addList(String.valueOf(a),String.valueOf(a),String.valueOf(a));
-//            a++;
-//        }
-//        System.out.println("<><><><><><><><><><><><><><><><><><>");
-//        songRequest.MakeRequest("a", "@Thomas_Yanuar gan minta lagunya !request J Rock - dia apa dia!");
-//        songRequest.MakeRequest("b", "@Thomas_Yanuar gan minta lagunya !request J Rock - dia apa dia!");
-//        songRequest.MakeRequest("c", "@Thomas_Yanuar gan minta lagunya !request J Rock - dia apa dia!");
-//        songRequest.MakeRequest("a", "#reqest J-Rock = dia apa dia");
-//        songRequest.PrintRequestQueue();
-//        System.out.println("<><><><><><><><><><><><><><><><><><>");
-////        System.out.println("\n\n");
-//        songRequest.PrintRequestChart();
-//        System.out.println("<><><><><><><><><><><><><><><><><><>");
-//        songRequest.MakeRequest("b", "@Thomas_Yanuar gan minta lagunya !request J Rock - dia apa dia!");
-//        songRequest.MakeRequest("b", "@Thomas_Yanuar gan minta lagunya !request J - dia apa dia!");
-//        songRequest.MakeRequest("b", "@Thomas_Yanuar gan minta lagunya !request J - dia apa dia!");
-//        songRequest.MakeRequest("b", "@Thomas_Yanuar gan minta lagunya !request J - dia apa dia!");
-//        songRequest.MakeRequest("b", "@Thomas_Yanuar gan minta lagunya !request J - dia apa dia!");
-//        songRequest.MakeRequest("b", "@Thomas_Yanuar gan minta lagunya !request J - dia apa dia!");
-//        songRequest.MakeRequest("b", "@Thomas_Yanuar gan minta lagunya !request J - dia apa dia!");
-//        songRequest.MakeRequest("b", "@Thomas_Yanuar gan minta lagunya !request J - dia apa dia!");
-//        songRequest.MakeRequest("c", "@Thomas_Yanuar gan minta lagunya !request J Rock - dia apa dia!");
-//        System.out.println("<><><><><><><><><><><><><><><><><><>");
-        songRequest.PrintRequestQueue();
-        System.out.println("<><><><><><><><><><><><><><><><><><>");
-        songRequest.PrintRequestChart();
+//        SongRequest songRequest = new SongRequest();
+//        songRequest.deleteChart();
+//        songRequest.currentDate="mi";
+//        songRequest.deleteChart();
+//        songRequest.currentDate="sen";
+//        songRequest.deleteChart();
+//        songRequest.currentDate="sel";
+//        songRequest.deleteChart();
+//        songRequest.currentDate="ra";
+//        songRequest.deleteChart();
+//        songRequest.currentDate="kam";
+//        songRequest.deleteChart();
+//        songRequest.currentDate="jum";
+//        songRequest.deleteChart();
+//        songRequest.currentDate="sab";
+//        songRequest.deleteChart();
+//        songRequest.currentDate="ming";
+//        songRequest.deleteChart();
+//        songRequest.currentDate="sen";
+//        songRequest.deleteChart();
+//        songRequest.currentDate="sel";
+//        songRequest.deleteChart();
+//        songRequest.currentDate="rab";
+//        songRequest.deleteChart();
+//        songRequest.currentDate="kam";
+//        songRequest.deleteChart();
+//        songRequest.currentDate="jum";
+//        songRequest.deleteChart();
+//        songRequest.currentDate="sab";
+//        songRequest.deleteChart();
+//        songRequest.currentDate="ming";
+//        songRequest.deleteChart();
+//        songRequest.currentDate="sen";
     }
 
 }
