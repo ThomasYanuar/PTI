@@ -81,7 +81,9 @@
         </div>
         <div id="div3" class="wew3" style="background-color: bisque;">
             <div class="jumbotron" style="background-color: #269abc;">
-            <h1>Music queue</h1>
+                <h1>Music queue</h1><br>
+                
+                <h1 style="align-content: right;">Charts Pendengar</h1>
             </div>
                                  
                                      <iframe src="http://jogjastreamers.com/masdha-fm.html" 
@@ -117,12 +119,10 @@
                     function refresh() {
                         $.get('showqueue.jsp', function (result) {
                             $('#feeed').html(result);
-                        });
-                    }
+                        });}
                 </script>
                 <div id="feeed" style="background-color: #419641;
-                     height:440px;width:300px;"
-                     >                
+                     height:440px;width:300px;">                
                     <iframe id="yuhu" src="showqueue.jsp" scrolling="no" 
                             style="height:500px;width:300px; font-size: small;
                             overflow-x:hidden;overflow-y:hidden"> 
