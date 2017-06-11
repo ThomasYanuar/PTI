@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
  * @author Kirizu
  */
 public class SongRequest {
-    
+
     static String tempDate = "";
 //    String currentDate = "a";
     static int countDate = -1;
@@ -76,7 +76,6 @@ public class SongRequest {
     public void setVote(int vote) {
         this.vote = vote;
     }
-    
 //    public Date getDate() {
 //        return date;
 //    }
@@ -164,24 +163,25 @@ public class SongRequest {
 //        JOptionPane.showMessageDialog(null, "tidak masuk");
         System.out.println("");
     }
-    
+
     public void deleteChart() {
         Date date = new Date();
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        
+
         String currentDate = dateFormat.format(date);
-        if (countDate!=7) {
+        if (countDate != 7) {
             if (!tempDate.equals(currentDate)) {
                 countDate++;
-                tempDate=currentDate;
-                System.out.println("tempdate = "+tempDate);
+                tempDate = currentDate;
+                System.out.println("tempdate = " + tempDate);
             }
             System.out.println("countdate = " + countDate);
         }
-        if (countDate==7) {
-            countDate=0;
-            System.out.println("remove = "+countDate);
+        if (countDate == 7) {
+            countDate = 0;
+            System.out.println("remove = " + countDate);
             songListChart.removeAll(songListChart);
+            songListQueue.removeAll(songListQueue);
         }
     }
 
@@ -220,5 +220,4 @@ public class SongRequest {
 //        songRequest.deleteChart();
 //        songRequest.currentDate="sen";
     }
-
 }

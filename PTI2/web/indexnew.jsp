@@ -76,6 +76,23 @@
                 <h1>Twitter feed</h1>
 
             </div>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    var interval = setInterval(refresh1, 5000);
+                });
+                function refresh1() {
+                    $.get('', function (result) {
+                        $('#').html(result);
+                    });
+                }
+            </script>
+            <div id="feeed2" style="background-color: #419641;
+                 height:440px;width:300px;">                
+                <iframe id="yuhu" src="" scrolling="no" 
+                        style="height:500px;width:300px; font-size: small;
+                        overflow-x:hidden;overflow-y:hidden"> 
+                </iframe>                   
+            </div>
 
         </div>
     </div>
