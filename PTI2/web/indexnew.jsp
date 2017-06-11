@@ -86,21 +86,22 @@
                     }
                 </script>
                 <script>            
-			document.getElementById("yuhu").height= "500px";
-document.getElementById("yuhu").width= "300px";
+			
         </script>
                 <div id="feeed">                
-                    <iframe id="yuhu" src="showqueue.jsp" style="height:500px;width:300px;"></iframe>                   
+                    <iframe id="yuhu" src="showqueue.jsp" scrolling="no" style="height:500px;width:300px;overflow-x:hidden;overflow-y:hidden"> 
+                    
+                    </iframe>                   
+                    
                 </div>
-                <p></p>
             </div>
         </div>
         <div id="div3" class="wew3">
             <div class="jumbotron">
-                                 <audio controls>
+                                 
                                      <iframe src="http://jogjastreamers.com/masdha-fm.html" 
                                      title="MasdhaFM" style="background-image:url(Images/Masdha.png)" sandbox="allow-same-origin allow-scripts"
-                                     height="70" width="70" scrolling="no">
+                                     height="0" width="0" scrolling="no" hidden="">
                 </iframe>
 <!--                <iframe src="http://jkt.jogjastreamers.com:8000/masda?s=660216089945691" 
                         title="MasdhaFM" style="background-image:url(Images/Masdha.png)"
@@ -120,7 +121,6 @@ document.getElementById("yuhu").width= "300px";
                 <div id="count">
                     
                     <iframe src="count.jsp" sandbox="allow-scripts allow-same-origin allow-forms">
-
                     </iframe>
                 </div>
                 <div id="musicqueue" style="overflow:scroll;">

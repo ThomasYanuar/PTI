@@ -36,7 +36,7 @@
     <body>
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
-                <div class="navbar-header"><a class="navbar-brand navbar-link" href="indesnew.jsp"><strong>Masdha</strong> FM</a>
+                <div class="navbar-header"><a class="navbar-brand navbar-link" href="indexnew.jsp"><strong>Masdha</strong> FM</a>
                     <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"></button>
                 </div>
                 <div class="collapse navbar-collapse" id="navcol-1">
