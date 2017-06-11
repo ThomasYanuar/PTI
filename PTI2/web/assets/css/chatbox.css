@@ -10,7 +10,7 @@ and open the template in the editor.
 
 html,
 body {
-    
+    font-size: 10pt;
     font-family: sans-serif;
 }
 ::-webkit-scrollbar {
