@@ -80,6 +80,10 @@
             </div>
         </div>
         <div id="div3" class="wew3" style="background-color: bisque;">
+            <div id="count">
+                    <iframe src="count.jsp" sandbox="allow-scripts allow-same-origin allow-forms" style="height: 35px;width: 28px;">
+                    </iframe>
+                </div>
             
                 <h1>Music queue</h1><br>
                 
@@ -107,10 +111,7 @@
                         });
                     }
                 </script>
-                <div id="count">
-                    <iframe src="count.jsp" sandbox="allow-scripts allow-same-origin allow-forms" style="height: 35px;width: 28px;">
-                    </iframe>
-                </div>
+                
                 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
                 <script type="text/javascript">
                     $(document).ready(function () {
