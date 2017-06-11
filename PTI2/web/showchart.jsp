@@ -5,7 +5,6 @@
 --%>
 
 <%@page import="Feed.SongRequest"%>
-<%@page import="Feed.StreamRequest"%>
 <%@page import="twitter4j.Status"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
@@ -19,7 +18,7 @@
 
     </head>
     <body>
-        <%StreamRequest sr = new StreamRequest();%>
+        
         <%for (SongRequest songRequest : SongRequest.songListChart) {
                 String user = songRequest.getUser();
                 String artis = songRequest.getArtis();

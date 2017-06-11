@@ -11,8 +11,8 @@ public class twitterfeedsrvlt {
             String title = songRequest.getTitle();
             System.out.println(user + " : " + artis + " - " + title);
         }
-        new Feed.SongRequest().PrintRequestQueue();
-        System.out.println("<><><><><>");
-        new Feed.SongRequest().PrintRequestChart();
+//        new Feed.SongRequest().PrintRequestQueue();
+//        System.out.println("<><><><><>");
+//        new Feed.SongRequest().PrintRequestChart();
     }
 }

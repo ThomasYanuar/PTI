@@ -28,6 +28,7 @@ public class SongRequest {
 
     public static LinkedList<SongRequest> songListQueue = new LinkedList();
     public static LinkedList<SongRequest> songListChart = new LinkedList();
+    public static LinkedList<Feed> feedList = new LinkedList();
 
     public SongRequest() {
     }
@@ -85,13 +86,15 @@ public class SongRequest {
 //    }
 
     public void addListQueue(String user, String artis, String title) {
-        SongRequest songRequest = new SongRequest();
         songListQueue.addLast(new SongRequest(user, artis, title));
     }
 
     public void addListChart(String user, String artis, String title, int vote) {
-        SongRequest songRequest = new SongRequest();
         songListChart.addLast(new SongRequest(user, artis, title, vote));
+    }
+
+    public void addFeedList(String user, String text) {
+        feedList.addLast(new Feed(user, text));
     }
 
     public void PrintRequestQueue() {
@@ -116,7 +119,17 @@ public class SongRequest {
         }
     }
 
+    public void PrintFeedList() {
+        for (Feed feed : SongRequest.feedList) {
+            String user = feed.getUser();
+            String text = feed.getText();
+            System.out.println("@" + user + " : " + text);
+        }
+
+    }
+
     public void MakeRequest(String user, String text) {
+        addFeedList(user, text);
         if (!tempText.equals(text)) {
             if (text.toLowerCase().contains("!request")) {
 //                JOptionPane.showMessageDialog(null, "masuk");
@@ -182,6 +195,7 @@ public class SongRequest {
             System.out.println("remove = " + countDate);
             songListChart.removeAll(songListChart);
             songListQueue.removeAll(songListQueue);
+            feedList.removeAll(feedList);
         }
     }
 

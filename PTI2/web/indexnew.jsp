@@ -76,19 +76,20 @@
                 <h1>Twitter feed</h1>
 
             </div>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
             <script type="text/javascript">
                 $(document).ready(function () {
-                    var interval = setInterval(refresh1, 5000);
+                    var interval = setInterval(refresh2, 5000);
                 });
-                function refresh1() {
-                    $.get('', function (result) {
-                        $('#').html(result);
+                function refresh2() {
+                    $.get('showfeed.jsp', function (result) {
+                        $('#feeed3').html(result);
                     });
                 }
             </script>
-            <div id="feeed2" style="background-color: #419641;
+            <div id="feeed3" style="background-color: #419641;
                  height:440px;width:300px;">                
-                <iframe id="yuhu" src="" scrolling="no" 
+                <iframe id="yuhu" src="showfeed.jsp" scrolling="no" 
                         style="height:500px;width:300px; font-size: small;
                         overflow-x:hidden;overflow-y:hidden"> 
                 </iframe>                   

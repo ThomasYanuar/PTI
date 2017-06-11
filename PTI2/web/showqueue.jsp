@@ -6,7 +6,6 @@
 
 <%@page import="Feed.SongRequest"%>
 <%@page import="twitter4j.Status"%>
-<%@page import="Feed.StreamRequest"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
@@ -19,7 +18,7 @@
 
     </head>
     <body>
-        <%StreamRequest sr = new StreamRequest();%>
+        
         <section class="chatbox">
             <section class="chat-window">
                 <%
