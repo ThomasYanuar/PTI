@@ -80,11 +80,11 @@
             </div>
         </div>
         <div id="div3" class="wew3" style="background-color: bisque;">
-            <div class="jumbotron" style="background-color: #269abc;">
+            
                 <h1>Music queue</h1><br>
                 
-                <h1 style="align-content: right;">Charts Pendengar</h1>
-            </div>
+                <h1 style="float: right;">Charts Pendengar</h1>
+            
                                  
                                      <iframe src="http://jogjastreamers.com/masdha-fm.html" 
                                      title="MasdhaFM" style="background-image:url(Images/Masdha.png)" sandbox="allow-same-origin allow-scripts"
