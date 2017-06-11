@@ -72,69 +72,67 @@
         <iframe src="streamfeedtwitter.jsp" width="0" height="0" hidden=""></iframe>
         <div id="div2" class="wew2" style="background-color: rosybrown;">
             <div class="jumbotron">
-                
+
                 <h1>Twitter feed</h1>
-                
+
             </div>
-                
-            </div>
+
         </div>
-        <div id="div3" class="wew3" style="background-color: bisque;">
-            <div id="count">
-                    <iframe src="count.jsp" sandbox="allow-scripts allow-same-origin allow-forms" style="height: 35px;width: 28px;">
-                    </iframe>
-                </div>
-            
-                <h1>Music queue</h1><br>
-                
-                <h1 style="float: right;">Charts Pendengar</h1>
-            
-                                 
-                                     <iframe src="http://jogjastreamers.com/masdha-fm.html" 
-                                     title="MasdhaFM" style="background-image:url(Images/Masdha.png)" sandbox="allow-same-origin allow-scripts"
-                                     height="0" width="0" scrolling="no" hidden="">
-                </iframe>
-<!--                <iframe src="http://jkt.jogjastreamers.com:8000/masda?s=660216089945691" 
-                        title="MasdhaFM" style="background-image:url(Images/Masdha.png)"
-                        height="180" width="300">
-                </iframe>-->
-                <br>
-                <div id="musicqueue" style="background-color: #23527c;">
-                    
-                    <script type="text/javascript">
-                    $(document).ready(function () {
-                        var interval = setInterval(refresh1, 5000);
+    </div>
+    <div id="div3" class="wew3" style="background-color: bisque;">
+        <div id="count">
+            <h3>Jumlah Streamer :</h3>
+            <iframe src="count.jsp" sandbox="allow-scripts allow-same-origin allow-forms" style="height: 35px;width: 28px;">
+            </iframe>
+        </div>
+        <h1>Music queue &nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;
+            Charts Pendengar</h1>
+        <iframe src="http://jogjastreamers.com/masdha-fm.html" 
+                title="MasdhaFM" style="background-image:url(Images/Masdha.png)" sandbox="allow-same-origin allow-scripts"
+                height="0" width="0" scrolling="no" hidden="">
+        </iframe>
+        <!--                <iframe src="http://jkt.jogjastreamers.com:8000/masda?s=660216089945691" 
+                                title="MasdhaFM" style="background-image:url(Images/Masdha.png)"
+                                height="180" width="300">
+                        </iframe>-->
+        <br>
+        <div id="musicqueue" style="background-color: #23527c;">
+
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    var interval = setInterval(refresh1, 5000);
+                });
+                function refresh1() {
+                    $.get('count.jsp', function (result) {
+                        $('#count').html(result);
                     });
-                    function refresh1() {
-                        $.get('count.jsp', function (result) {
-                            $('#count').html(result);
-                        });
-                    }
-                </script>
-                
-                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-                <script type="text/javascript">
+                }
+            </script>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+            <script type="text/javascript">
                     $(document).ready(function () {
                         var interval = setInterval(refresh, 5000);
                     });
                     function refresh() {
                         $.get('showqueue.jsp', function (result) {
                             $('#feeed').html(result);
-                        });}
-                </script>
-                <div id="feeed" style="background-color: #419641;
-                     height:440px;width:300px;">                
-                    <iframe id="yuhu" src="showqueue.jsp" scrolling="no" 
-                            style="height:500px;width:300px; font-size: small;
-                            overflow-x:hidden;overflow-y:hidden"> 
-                    </iframe>                   
-                </div>
-                </div>
-            
+                        });
+                    }
+            </script>
+            <div id="feeed" style="background-color: #419641;
+                 height:440px;width:300px;">                
+                <iframe id="yuhu" src="showqueue.jsp" scrolling="no" 
+                        style="height:500px;width:300px; font-size: small;
+                        overflow-x:hidden;overflow-y:hidden"> 
+                </iframe>                   
+            </div>
         </div>
-        <footer id="footer" class="footer1"></footer>
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    </body>
+    </div>
+    <footer id="footer" class="footer1"></footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
 
 </html>
