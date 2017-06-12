@@ -13,7 +13,7 @@
         <title>Count</title>
     </head>
     <body>
-        <jsp:useBean class="Count.countver2"
+        <jsp:useBean class="Count.CountStream"
                      id="sessionCounter" scope="application" />         
         <jsp:getProperty name="sessionCounter"
                          property="currentSessionCount" />

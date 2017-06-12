@@ -14,6 +14,6 @@
     </head>
     <body>
         <%SongRequest songRequest = new SongRequest();
-        songRequest.deleteChart();%>
+        songRequest.deleteList();%>
     </body>
 </html>

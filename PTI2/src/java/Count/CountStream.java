@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
  *
  * @author Yoseph
  */
-public class countver2 implements HttpSessionListener {
+public class CountStream implements HttpSessionListener {
 
     private int totalSessionCount = 0;
     private int currentSessionCount = 0;

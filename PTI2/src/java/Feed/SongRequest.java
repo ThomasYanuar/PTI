@@ -129,8 +129,8 @@ public class SongRequest {
     }
 
     public void MakeRequest(String user, String text) {
-        addFeedList(user, text);
         if (!tempText.equals(text)) {
+            addFeedList(user, text.replaceAll("@Thomas_Yanuar ", ""));
             if (text.toLowerCase().contains("!request")) {
 //                JOptionPane.showMessageDialog(null, "masuk");
                 System.out.println("");
@@ -177,7 +177,7 @@ public class SongRequest {
         System.out.println("");
     }
 
-    public void deleteChart() {
+    public void deleteList() {
         Date date = new Date();
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
@@ -199,39 +199,4 @@ public class SongRequest {
         }
     }
 
-    public static void main(String[] args) {
-//        SongRequest songRequest = new SongRequest();
-//        songRequest.deleteChart();
-//        songRequest.currentDate="mi";
-//        songRequest.deleteChart();
-//        songRequest.currentDate="sen";
-//        songRequest.deleteChart();
-//        songRequest.currentDate="sel";
-//        songRequest.deleteChart();
-//        songRequest.currentDate="ra";
-//        songRequest.deleteChart();
-//        songRequest.currentDate="kam";
-//        songRequest.deleteChart();
-//        songRequest.currentDate="jum";
-//        songRequest.deleteChart();
-//        songRequest.currentDate="sab";
-//        songRequest.deleteChart();
-//        songRequest.currentDate="ming";
-//        songRequest.deleteChart();
-//        songRequest.currentDate="sen";
-//        songRequest.deleteChart();
-//        songRequest.currentDate="sel";
-//        songRequest.deleteChart();
-//        songRequest.currentDate="rab";
-//        songRequest.deleteChart();
-//        songRequest.currentDate="kam";
-//        songRequest.deleteChart();
-//        songRequest.currentDate="jum";
-//        songRequest.deleteChart();
-//        songRequest.currentDate="sab";
-//        songRequest.deleteChart();
-//        songRequest.currentDate="ming";
-//        songRequest.deleteChart();
-//        songRequest.currentDate="sen";
-    }
 }

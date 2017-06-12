@@ -4,7 +4,7 @@
         <listener-class>Test.SessionCounter</listener-class>
     </listener>
     <listener>
-        <listener-class>Count.countver2</listener-class>
+        <listener-class>Count.CountStream</listener-class>
     </listener>
     <listener>
         <listener-class>Count.CountModel</listener-class>
