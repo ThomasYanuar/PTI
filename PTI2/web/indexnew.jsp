@@ -71,7 +71,7 @@
         </div>
         <iframe src="streamfeedtwitter.jsp" width="0" height="0" hidden=""></iframe>
         <div id="div2" class="wew2" style="background-color: #23527c;">
-            <div class="jumbotron">
+            <div class="jumbotron" style="background-color: transparent;">
 
                 <h1>Twitter feed</h1>
 
@@ -146,6 +146,16 @@
                         overflow-x:hidden;overflow-y:hidden"> 
                 </iframe>                   
             </div>
+            <script type="text/javascript">
+                    $(document).ready(function () {
+                        var interval = setInterval(refresh3, 5000);
+                    });
+                    function refresh3() {
+                        $.get('showchart.jsp', function (result) {
+                            $('#chartpendengar').html(result);
+                        });
+                    }
+            </script>
             <div id="chartpendengar" style="background-color: white;
                 height: 440px;width: 300px; float: right; margin-top: -440px;">
                      <iframe id="yuhu3" src="showchart.jsp" scrolling="no" 
