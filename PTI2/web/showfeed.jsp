@@ -23,8 +23,11 @@
         <%for (Feed feed : SongRequest.feedList) {
                 String user = feed.getUser();
                 String text = feed.getText();
-        out.println("@" + user + " : " + text);%>
+        out.println("@" + user + " : " + text);
+        %>
+        <br>
         <%}%>
+        
 
     </body>
 </html>

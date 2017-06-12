@@ -1,10 +1,14 @@
 div#div1{
+
   text-align:center;
   width:100%;
   border:dotted;
   padding:50px;
-  height:368px;
-  margin-top:4%;
+  height:600px;
+  margin-top:3%;
+  background-image: url(../..//Images/top_10.jpg);
+  background-size: 1370px 600px;
+  background-repeat: no-repeat;
 }
 
 nav.navbar.navbar-default{
@@ -23,7 +27,7 @@ div.container-fluid{
 }
 
 div#div2.wew2{
-  margin-top:17px;
+  margin-top:1px;
   float:right;
   height:500px;
   border:dotted;
@@ -32,7 +36,7 @@ div#div2.wew2{
 }
 
 div#div3.wew3{
-  margin-top:17px;
+  margin-top:1px;
   border:dotted;
   float:left;
   width:50%;

@@ -55,9 +55,9 @@
             </div>
         </nav>
         <div id="div1" class="wew1">
-            <div class="jumbotron">
-                <h1>Sedang Dalam Tahap Pengembangan</h1>
-                <p>Mohon bersabar ini ujian......</p>
+            <div class="jumbotron" style="background-color:transparent">
+                <img src="Images/Masdha.png" style="height: 200px;width: 300px;">
+                <p>80% gan.. </p>
                 <p></p>
                 <div class="dropdown open">
                     <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="true" type="button">Pilihan hidup</button>
@@ -70,7 +70,7 @@
             </div>
         </div>
         <iframe src="streamfeedtwitter.jsp" width="0" height="0" hidden=""></iframe>
-        <div id="div2" class="wew2" style="background-color: rosybrown;">
+        <div id="div2" class="wew2" style="background-color: #23527c;">
             <div class="jumbotron">
 
                 <h1>Twitter feed</h1>
@@ -97,7 +97,7 @@
 
         </div>
     </div>
-    <div id="div3" class="wew3" style="background-color: bisque;">
+    <div id="div3" class="wew3" style="background-color: bisque; ">
         <div id="count">
             <h3>Jumlah Streamer :</h3>
             <iframe src="count.jsp" sandbox="allow-scripts allow-same-origin allow-forms" style="height: 35px;width: 28px;">
@@ -116,8 +116,7 @@
                                 height="180" width="300">
                         </iframe>-->
         <br>
-        <div id="musicqueue" style="background-color: #23527c;">
-
+        <div id="musicqueue" style="background-color: transparent; ">
             <script type="text/javascript">
                 $(document).ready(function () {
                     var interval = setInterval(refresh1, 5000);
@@ -139,12 +138,20 @@
                         });
                     }
             </script>
-            <div id="feeed" style="background-color: #419641;
+            
+            <div id="feeed" style="background-color:transparent;
                  height:440px;width:300px;">                
                 <iframe id="yuhu" src="showqueue.jsp" scrolling="no" 
                         style="height:500px;width:300px; font-size: small;
                         overflow-x:hidden;overflow-y:hidden"> 
                 </iframe>                   
+            </div>
+            <div id="chartpendengar" style="background-color: white;
+                height: 440px;width: 300px; float: right; margin-top: -440px;">
+                     <iframe id="yuhu3" src="showchart.jsp" scrolling="no" 
+                        style="height:500px;width:300px; font-size: small;
+                        overflow-x:hidden;overflow-y:hidden"> 
+                </iframe>
             </div>
         </div>
     </div>
