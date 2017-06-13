@@ -1,0 +1,54 @@
+div#div1{
+
+  text-align:center;
+  width:100%;
+  border:dotted;
+  padding:50px;
+  height:600px;
+  margin-top:3%;
+  background-image: url(../..//Images/top_10.jpg);
+  background-size: 1370px 600px;
+  background-repeat: no-repeat;
+}
+
+nav.navbar.navbar-default{
+  position:fixed;
+  width:100%;
+  margin:auto;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover{
+  color:#555;
+  background-color:#e7e7e7;
+}
+
+div.container-fluid{
+  background-color:rgba(154,52,45,0.69);
+}
+
+div#div2.wew2{
+  margin-top:1px;
+  float:right;
+  height:500px;
+  border:dotted;
+  width:50%;
+  background-color: white;
+}
+
+div#div3.wew3{
+  margin-top:1px;
+  border:dotted;
+  float:left;
+  width:50%;
+  height:500px;
+}
+
+footer#footer.footer1{
+  border:dotted;
+  background-color:rgb(183,112,108);
+  margin-top:323px;
+  height:100px;
+  margin-top: 1000px;
+  width:100%;
+}
+
