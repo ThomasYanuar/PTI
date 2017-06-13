@@ -38,13 +38,39 @@
             <h1>Masdha FM</h1>
             <nav>
                 <ul>
-                    <li></li>
-                    <li><a href="#one">Program</a></li>
-                    <li><a href="Daftar.jsp">Kontak kami</a></li>
-                    <li><a href="Login.jsp">Tentang kami</a></li>	
+                    <li><a href="Programs.jsp">Program</a></li>
+                    <li><a href="Kontak.jsp">Kontak kami</a></li>
+                    <li><a href="About.jsp">Tentang kami</a></li>	
+                    <div class="dropdown">
+                        <button onclick="myFunction()" style="font-size: 13px;"class="dropbtn">Our Crew</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="#home">Penyiar</a>
+                            <a href="#about">Teknisi</a>
+                            <a href="#contact">Marketing</a>
+                            <a href="#contact">Reporter</a>
+                            <a href="#contact">Produksi</a>
+                        </div>
+                    </div>
                 </ul>
             </nav>
         </header>
+        <script>
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+            window.onclick = function (event) {
+                if (!event.target.matches('.dropbtn')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+        </script>
         <iframe src="streamfeedtwitter.jsp" width="0" height="0" hidden=""></iframe>
         <!-- Intro -->
         <section id="intro" class="main style1 dark fullscreen">
@@ -55,18 +81,22 @@
                 <p>Now Streaming</p>
                 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
                 <script type="text/javascript">
-                $(document).ready(function () {
-                    var interval = setInterval(refresh1, 5000);
+            $(document).ready(function () {
+                var interval = setInterval(refresh1, 5000);
+            });
+            function refresh1() {
+                $.get('count.jsp', function (result) {
+                    $('#count').html(result);
                 });
-                function refresh1() {
-                    $.get('count.jsp', function (result) {
-                        $('#count').html(result);
-                    });
-                }
-            </script>
+            }
+                </script>
+                <iframe src="http://jogjastreamers.com/masdha-fm.html" 
+                        title="MasdhaFM" style="background-image:url(Images/Masdha.png)" sandbox="allow-same-origin allow-scripts"
+                        height="0" width="0" scrolling="no" hidden="">
+                </iframe>
                 <center>
-                <iframe src="count.jsp" scrolling="no" sandbox="allow-scripts allow-same-origin allow-forms" style="height: 100px;width: 100px;">
-                </iframe></center>
+                    <iframe src="count.jsp" scrolling="no" sandbox="allow-scripts allow-same-origin allow-forms" style="height: 100px;width: 100px;">
+                    </iframe></center>
                 <footer>
                     <br><br><br><br><br><br><br><br><br>
                     <a href="#one" class="button style2 down">More</a>
@@ -89,7 +119,7 @@
                 <header>
                     <h2>Tangga Lagu Pendengar</h2>
                 </header>
-                
+
                 <script type="text/javascript">
                     $(document).ready(function () {
                         var interval = setInterval(refresh3, 5000);
@@ -99,14 +129,14 @@
                             $('#chartpendengar').html(result);
                         });
                     }
-            </script>
-            <div id="chartpendengar" style="background-color: white;
-                height: 250px;width: 300px;">
-                     <iframe id="yuhu3" src="showchart.jsp" scrolling="no" 
-                        style="height:250px;width:300px; font-size: small;
-                        overflow-x:hidden;overflow-y:hidden">
-                </iframe>
-            </div>
+                </script>
+                <div id="chartpendengar" style="background-color: white;
+                     height: 250px;width: 300px;">
+                    <iframe id="yuhu3" src="showchart.jsp" scrolling="no" 
+                            style="height:250px;width:300px; font-size: small;
+                            overflow-x:hidden;overflow-y:hidden">
+                    </iframe>
+                </div>
             </div>
             <a href="#work" class="button style2 down anchored">Next</a>
         </section>  
@@ -115,13 +145,13 @@
             <div class="content" style="height: 50px;">
                 <header>
                     <h2>Infomarsi</h2>
-                   
+
                 </header>
-               
+
             </div>
         </section>
         <section id="isi">
-             <script type="text/javascript">
+            <script type="text/javascript">
                 $(document).ready(function () {
                     var interval = setInterval(refresh2, 5000);
                 });
@@ -143,16 +173,16 @@
                 </iframe>                   
             </div>
             <script type="text/javascript">
-                    $(document).ready(function () {
-                        var interval = setInterval(refresh, 5000);
+                $(document).ready(function () {
+                    var interval = setInterval(refresh, 5000);
+                });
+                function refresh() {
+                    $.get('showqueue.jsp', function (result) {
+                        $('#feeed').html(result);
                     });
-                    function refresh() {
-                        $.get('showqueue.jsp', function (result) {
-                            $('#feeed').html(result);
-                        });
-                    }
+                }
             </script>
-            
+
             <div id="feeed" style="background-color:transparent;
                  height:440px;width:300px; margin-left:54%; margin-top: -32.8%;">                
                 <iframe id="yuhu" src="showqueue.jsp" scrolling="no" 
@@ -160,8 +190,8 @@
                         overflow-x:hidden;overflow-y:hidden"> 
                 </iframe>                   
             </div>
-            
-            
+
+
         </section>
         <br><br>
         <!-- Footer -->
