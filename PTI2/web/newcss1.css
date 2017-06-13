@@ -1,0 +1,15 @@
+
+table,th,td {
+    border: 1px solid aliceblue;
+    font-family: monospace;}
+table{
+    border-collapse: separate;
+    width: 70%;
+}
+th{
+    height:50px;
+    background-color: darkgray;
+}
+tr:nth-child(even){
+    background-color: chocolate;
+}

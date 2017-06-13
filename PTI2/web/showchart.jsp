@@ -20,11 +20,10 @@
     <body>
         
         <%for (SongRequest songRequest : SongRequest.songListChart) {
-                String user = songRequest.getUser();
                 String artis = songRequest.getArtis();
                 String title = songRequest.getTitle();
                 int vote = songRequest.getVote();%>
-        <%out.println(user + " : " + artis + " - " + title + " ("+ vote +" Request)");%>
+        <%out.println(artis + " - " + title + " ("+ vote +" Request)");%>
         <%}%>
 
     </body>

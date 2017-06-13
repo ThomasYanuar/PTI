@@ -12,12 +12,14 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Count</title>
     </head>
-    <body>
+    <body style="color: white; font-size: 100px;">
+    <center>
         <jsp:useBean class="Count.CountStream"
                      id="sessionCounter" scope="application" />         
         <jsp:getProperty name="sessionCounter"
                          property="currentSessionCount" />
         <br>
+    </center>
 
     </body>
 </html>
