@@ -11,6 +11,6 @@ package Feed;
  */
 public class twitterfeed {
     public static void main(String[] args) {
-        new Feed.StreamRequest().StreamRequest();
+
     }
 }
