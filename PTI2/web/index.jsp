@@ -50,13 +50,16 @@
         <section id="intro" class="main style1 dark fullscreen">
             <div class="content">
                 <header>
-                    <h2>Masdha FM</h2>
+                    <br><br>
+                    <br><br>
+                    <img src="Images/mazdha.png" style="height:85px;width:300px;">
                 </header>
-                <p>Now Streaming</p>
+                <p>Pendengar Saat Ini</p>
                 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-                <script type="text/javascript">
+                <center>
+                    <script type="text/javascript">
                 $(document).ready(function () {
-                    var interval = setInterval(refresh1, 5000);
+                    var interval = setInterval(refresh1, 1000);
                 });
                 function refresh1() {
                     $.get('count.jsp', function (result) {
@@ -64,11 +67,13 @@
                     });
                 }
             </script>
-                <center>
-                <iframe src="count.jsp" scrolling="no" sandbox="allow-scripts allow-same-origin allow-forms" style="height: 100px;width: 100px;">
-                </iframe></center>
+            <div id="count" style="font-size: xx-large;">
+                <iframe src="count.jsp" scrolling="no" sandbox="allow-scripts allow-same-origin allow-forms" style="height: 200px;width: 200px;
+                        font-size: xx-large;">
+                </iframe>
+            </div></center>
                 <footer>
-                    <br><br><br><br><br><br><br><br><br>
+                    <br><br><br><br><br><br>
                     <a href="#one" class="button style2 down">More</a>
                 </footer>
             </div>
@@ -79,7 +84,8 @@
                 <header>
                     <h2>Radio Masdha</h2>
                 </header>
-                <p>adalah bla bla bla........ isi ken..</p>
+                <p>Masdha FM merupakan salah satu stasiun radio yang ada di Jogja. Stasiun radio ini terletak di Kampus III Universitas Sanata Dharma, Paingan, Maguwoharjo, Depok, Sleman, Jogja. Stasiun radio ini telah dibentuk sejak tanggal 15 Oktober 1990 oleh beberapa dosen Universitas Sanata Dharma Jogja. Pada tanggal 5 April 2000, Radio Masdha resmi mengudara sebagai radio komersial dengan nama badan hukum PT. Radio Swara Mahasiswa Sanata Dharma. Stasiun radio ini ditujukan bagi pendengar kaum muda khususnya mahasiswa.
+</p>
             </div>
             <a href="#two" class="button style2 down anchored">Next</a>
         </section>
@@ -132,8 +138,8 @@
                 }
             </script>
             <br><br><br>
-            <h1 style="font-size:65px;margin-left: 20%;">TIME LINE</h1>
-            <h1 style="float: right;font-size:65px; margin-top: -1.8%;margin-right: 1%;">REQUEST QUEUE</h1>
+            <h1 style="font-size:65px;margin-left: 22%;">TIMELINE</h1>
+            <h1 style="float: right;font-size:65px; margin-top: -1.8%;margin-right: 18%;">REQUEST</h1>
             <br>
             <div id="feeed3" style="background-color: transparent;
                  height:440px;width:300px; margin-left: 25%; ">                
@@ -154,7 +160,7 @@
             </script>
             
             <div id="feeed" style="background-color:transparent;
-                 height:440px;width:300px; margin-left:54%; margin-top: -32.8%;">                
+                 height:440px;width:300px; margin-left:54%; margin-top: -32.4%;">                
                 <iframe id="yuhu" src="showqueue.jsp" scrolling="no" 
                         style="height:500px;width:300px; font-size: small;
                         overflow-x:hidden;overflow-y:hidden"> 

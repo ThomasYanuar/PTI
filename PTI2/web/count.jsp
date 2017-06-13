@@ -12,7 +12,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Count</title>
     </head>
-    <body style="color: white; font-size: 100px;">
+    <body style="color: white; font-size: xx-large;font-weight: bolder;">
     <center>
         <jsp:useBean class="Count.CountStream"
                      id="sessionCounter" scope="application" />         
