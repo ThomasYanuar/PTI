@@ -77,13 +77,6 @@ public class SongRequest {
     public void setVote(int vote) {
         this.vote = vote;
     }
-//    public Date getDate() {
-//        return date;
-//    }
-//
-//    public void setVote(Date date) {
-//        this.date = date;
-//    }
 
     public void addListQueue(String user, String artis, String title) {
         songListQueue.addLast(new SongRequest(user, artis, title));
@@ -96,38 +89,6 @@ public class SongRequest {
     public void addFeedList(String user, String text) {
         feedList.addLast(new Feed(user, text));
     }
-
-    public void PrintRequestQueue() {
-//        int n = 0;
-        for (SongRequest songRequest : songListQueue) {
-            String user = songRequest.getUser();
-            String artis = songRequest.getArtis();
-            String title = songRequest.getTitle();
-            System.out.println(user + " : " + artis + " - " + title);
-        }
-    }
-
-    public void PrintRequestChart() {
-//        int n = 0;
-        java.util.Collections.sort(songListChart, new FeedCompare());
-        for (SongRequest songRequest : songListChart) {
-            String user = songRequest.getUser();
-            String artis = songRequest.getArtis();
-            String title = songRequest.getTitle();
-            int vote = songRequest.getVote();
-            System.out.println(user + " : " + artis + " - " + title + " vote " + vote);
-        }
-    }
-
-    public void PrintFeedList() {
-        for (Feed feed : SongRequest.feedList) {
-            String user = feed.getUser();
-            String text = feed.getText();
-            System.out.println("@" + user + " : " + text);
-        }
-
-    }
-
     public void MakeRequest(String user, String text) {
         if (!tempText.equals(text)) {
             addFeedList(user, text.replaceAll("@Thomas_Yanuar ", ""));

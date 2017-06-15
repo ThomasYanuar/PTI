@@ -73,7 +73,7 @@
         <div id="div1" class="wew1">
             <div class="jumbotron" style="background-color:transparent">
                 <img src="Images/Masdha.png" style="height: 200px;width: 300px;">
-                <p>80% gan.. </p>
+                <!--<p>80% gan.. </p>-->
                 <p></p>
                 <div class="dropdown open">
                     <menu class="btn btn-default dropdown-toggle" style="background-color: transparent;"
@@ -188,5 +188,4 @@
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     </body>
-
 </html>

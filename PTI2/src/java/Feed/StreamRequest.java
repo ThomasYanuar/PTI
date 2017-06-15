@@ -36,9 +36,7 @@ public class StreamRequest {
             public void onStatus(Status status) {
                 SongRequest songRequest = new SongRequest();
                 songRequest.MakeRequest(status.getUser().getScreenName(), status.getText());
-//                JOptionPane.showMessageDialog(null, "listen");
-//                songRequest.getList();
-//                System.out.println("\n" + status.getUser().getScreenName() + "\n" + status.getText());
+
             }
 
             @Override

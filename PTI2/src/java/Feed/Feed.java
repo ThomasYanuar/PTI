@@ -17,8 +17,6 @@ public class Feed {
         this.user = user;
         this.text = text;
     }
-    
-    
 
     public String getUser() {
         return user;

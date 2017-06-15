@@ -18,7 +18,6 @@
 
     </head>
     <body>
-        
         <%for (SongRequest songRequest : SongRequest.songListChart) {
                 String artis = songRequest.getArtis();
                 String title = songRequest.getTitle();

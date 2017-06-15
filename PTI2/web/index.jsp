@@ -88,11 +88,7 @@
                 $.get('count.jsp', function (result) {
                     $('#count').html(result);
                 });
-                function refresh1() {
-                    $.get('count.jsp', function (result) {
-                        $('#count').html(result);
-                    });
-                }
+            }
             </script>
                 <p>Pendengar Saat Ini</p>
                 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -217,16 +213,6 @@
         <br><br>
         <!-- Footer -->
         <footer id="footer">
-            <!-- Icons -->
-            <!--					<ul class="actions">
-                                                            <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                                                            <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                                                            <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-                                                            <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                                                            <li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-                                                            <li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
-                                                    </ul>-->
-            <!-- Menu -->
             <ul class="menu">
                 <li>&copy; TeamPTI</li>
             </ul>

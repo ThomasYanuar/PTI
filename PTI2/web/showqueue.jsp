@@ -15,10 +15,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="assets/css/chatbox.css">
         <title>JSP Page</title>
-
     </head>
     <body>
-        
         <section class="chatbox">
             <section class="chat-window">
                 <%
